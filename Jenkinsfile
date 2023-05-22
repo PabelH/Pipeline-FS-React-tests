@@ -2,12 +2,12 @@ pipeline {
   agent any
   
   stages {
-    stage('Clonar repositorio') {
+    stage('Clone repository') {
       steps {
         git 'https://github.com/PabelH/react-testing.git'
       }
     }
-    stage('Install') {
+    stage('Install dep') {
       steps {
         
           sh 'npm install'
@@ -16,7 +16,7 @@ pipeline {
         
       }
     }
-  stage('Test') {
+  stage('Testing') {
       steps {
     
         //  sh 'yarn test'
