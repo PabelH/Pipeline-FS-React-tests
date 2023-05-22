@@ -7,7 +7,7 @@ pipeline {
         git 'https://github.com/PabelH/react-testing.git'
       }
     }
-    stage('Build') {
+    stage('Install') {
       steps {
         
           sh 'npm install'
