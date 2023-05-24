@@ -26,7 +26,7 @@ pipeline {
     }
   stage('Build and push Docker image') {
       steps {
-        withAmazonEcrRegistry(credentialsId: '6c01fe77-15fd-4e65-865d-2fc6ba08ac47') {
+        withAmazonEcrRegistry(credentialsId: 'ecr:us-east-2:aws-credentials') {
 
         sh 'docker build -t radionet .'
         sh 'docker tag radionet:latest 713860279714.dkr.ecr.us-east-2.amazonaws.com/radionet:latest'
